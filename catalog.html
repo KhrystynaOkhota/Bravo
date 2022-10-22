@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="uk" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+    <meta name="format-detection" content="telephone=no"/>
+
+    <title>Bravo-Collection</title>
+    <meta name="description" content=""/>
+
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css"/>
+
+    <link rel="stylesheet" href="assets/css/app.css"/>
+
+</head>
+<body>
+
+<header class="header sidebar">
+    <div class="--relative">
+        <div class="container">
+            <div class="header__top d-flex align-justify align-middle">
+                <div class="burger js-header">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="header__logo-box default-icon">
+                    <img src="assets/img/BC-logo-header.svg" alt="Bravo" class="header__logo">
+                </div>
+                <ul class="header-btn__wrap">
+                    <li class="header-btn ">
+                        <div class="header__search search header__icon">
+                            <img src="assets/img/search.svg" alt=""
+                                 class="overlap icon-search">
+                            <svg class="icon-close ">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
+                            </svg>
+                        </div>
+                    </li>
+                    <li class="header-btn">
+                        <a href="" class="d-flex align-middle align-center shop-cart --relative">
+                            <img src="assets/img/cart.svg" alt="" class="overlap shop-cart__img">
+                            <span class="shop-cart__num d-flex align-middle align-center">2</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="navbar ">
+
+            <nav class="menu-navigation ">
+                <ul class="menu">
+                    <li class="menu-item">
+                        <a href="catalog.html">SHOP ALL</a>
+                    </li>
+                    <li class="menu-item ">
+                        <a href="">TECHNIQUES</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="">STYLES</a>
+                    </li>
+                    <li class="menu-item ">
+                        <a href="">FOLK ART</a>
+                    </li>
+                    <li class="menu-item current-menu-item">
+                        <a href="">EXPERIENCES</a>
+                    </li>
+
+                    <li class="menu-item menu-item-has-children">
+                        <a href="">STORES</a>
+                        <ul class="sub-menu">
+                            <li class="menu-item"><a href="">STORES1</a></li>
+                            <li class="menu-item"><a href="">STORES2</a></li>
+                            <li class="menu-item"><a href="">STORES3</a></li>
+                            <li class="menu-item"><a href="">STORES54</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+
+            <div class="navbar__info">FREE SHIPPING IN ORDERS OVER $350</div>
+        </div>
+    </div>
+</header>
+
+<div class="search-block__main">
+    <div class="search-block__wrapper container">
+        <div class="search-block" data-url="/get-search" data-attribute="search">
+            <input autocomplete="off" class="search-block__input" type="text" name="search"
+                   placeholder="search">
+            <button class="search-block__btn d-flex align-middle align-center">
+                <img src="assets/img/search.svg" alt=""
+                     class="overlap icon-search">
+            </button>
+        </div>
+        <ul class="search-block__menu main_search search_disabled" style="display: none;">
+            <li data-key="0">Нічого не знайдено</li>
+        </ul>
+    </div>
+</div>
+
+
+<!--<div class="body-padding"></div>-->
+
+
+<main class="main">
+
+    <section class="catalog --relative">
+
+        <div class="container --relative">
+            <div class="section-vector__wrap">
+                <img src="assets/img/pattern-3.svg" class="section-vector" alt="">
+                <img src="assets/img/pattern-2.svg" class="section-vector" alt="">
+                <img src="assets/img/pattern-1.svg" class="section-vector" alt="">
+            </div>
+            <div class="row catalog__top">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex align-middle align-left">
+                    <button class="btn-filter d-flex ">
+                        <img src="assets/img/filter.svg" alt="">
+                        <span class="text-uppercase">Filter</span>
+                    </button>
+                    <div class="sort__title text-uppercase">Sort by:</div>
+                    <div class="sort__wrap d-flex align-left align-middle">
+
+                        <ul class="sort__list">
+                            <li>
+                                <a href="" class="text-uppercase">New Arrivals</a>
+                            </li>
+                            <li>
+                                <a href="" class="text-uppercase">Embroidered Garments</a>
+                            </li>
+                            <li>
+                                <a href="" class="text-uppercase">Dresses</a>
+                            </li>
+                            <li>
+                                <a href="" class="text-uppercase">Tops</a>
+                            </li>
+                            <li>
+                                <a href="" class="text-uppercase">Bottoms</a>
+                            </li>
+                            <li>
+                                <a href="" class="text-uppercase">Cotton Knit Garments</a>
+                            </li>
+                            <li>
+                                <a href="" class="text-uppercase">Accessories</a>
+                            </li>
+                            <li>
+                                <a href="" class="text-uppercase">Sale</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="filter__wrap d-none" id="ajax-filter-section">
+                        <div class="filter">
+                            <form action="#">
+                                <div class="filter__container">
+                                    <div class="filter__section">
+                                        <div class="filter__title"> Розмір</div>
+
+                                        <div class="filter__content">
+                                            <label class="checkbox-entry">
+                                                <input type="checkbox" value="36">
+                                                <span>36</span>
+                                            </label>
+
+                                            <label class="checkbox-entry">
+                                                <input type="checkbox" value="38">
+                                                <span>38</span>
+                                            </label>
+                                            <label class="checkbox-entry">
+                                                <input type="checkbox" value="40">
+                                                <span>36</span>
+                                            </label>
+
+                                            <label class="checkbox-entry">
+                                                <input type="checkbox" value="42">
+                                                <span>38</span>
+                                            </label>
+                                            <label class="checkbox-entry">
+                                                <input type="checkbox" value="44">
+                                                <span>36</span>
+                                            </label>
+
+                                            <label class="checkbox-entry">
+                                                <input type="checkbox" value="46">
+                                                <span>38</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="filter__section">
+                                        <div class="filter__title"> Колір</div>
+
+                                        <div class="filter__content">
+                                            <label class="checkbox-entry">
+                                                <input type="checkbox" value="">
+                                                <span>Білий</span>
+                                            </label>
+
+                                            <label class="checkbox-entry">
+                                                <input type="checkbox" value="">
+                                                <span>Білий</span>
+                                            </label>
+                                            <label class="checkbox-entry">
+                                                <input type="checkbox" value="">
+                                                <span>Нейтральний</span>
+                                            </label>
+
+                                            <label class="checkbox-entry">
+                                                <input type="checkbox" value="">
+                                                <span>38</span>
+                                            </label>
+                                            <label class="checkbox-entry">
+                                                <input type="checkbox" value="">
+                                                <span>Натуральний</span>
+                                            </label>
+
+                                            <label class="checkbox-entry">
+                                                <input type="checkbox" value="">
+                                                <span>Нейтральний</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="filter__section">
+                                        <div class="filter__title"> Категорії</div>
+
+                                        <div class="filter__content">
+                                            <label class="checkbox-entry">
+                                                <input type="checkbox" value="">
+                                                <span>Керсетки</span>
+                                            </label>
+
+                                            <label class="checkbox-entry">
+                                                <input type="checkbox" value="">
+                                                <span>Керсетки</span>
+                                            </label>
+
+                                        </div>
+                                    </div>
+                                    <div class="filter__section">
+                                        <div class="filter__title"> Техніка</div>
+
+                                        <div class="filter__content">
+                                            <label class="checkbox-entry">
+                                                <input type="checkbox" value="">
+                                                <span>Машинна вишивка</span>
+                                            </label>
+
+                                            <label class="checkbox-entry">
+                                                <input type="checkbox" value="">
+                                                <span>Машинна вишивка</span>
+                                            </label>
+
+                                            <label class="checkbox-entry">
+                                                <input type="checkbox" value="">
+                                                <span>Ручна вишивка</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="filter__section">
+                                        <div class="filter__title"> ціна</div>
+
+                                        <div class="filter__content">
+                                            <label class="checkbox-entry">
+                                                <input type="checkbox" value="">
+                                                <span>7500 ₴ - 10000 ₴</span>
+                                            </label>
+
+                                            <label class="checkbox-entry">
+                                                <input type="checkbox" value="">
+                                                <span>7500 ₴ - 10000 ₴</span>
+                                            </label>
+                                            <label class="checkbox-entry">
+                                                <input type="checkbox" value="">
+                                                <span>7500 ₴ - 10000 ₴</span>
+                                            </label>
+
+                                            <label class="checkbox-entry">
+                                                <input type="checkbox" value="">
+                                                <span>7500 ₴ - 10000 ₴</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="filter__section">
+                                        <div class="filter__title"> Стать</div>
+
+                                        <div class="filter__content">
+                                            <label class="checkbox-entry">
+                                                <input type="checkbox" value="">
+                                                <span>Чоловік</span>
+                                            </label>
+
+                                            <label class="checkbox-entry">
+                                                <input type="checkbox" value="">
+                                                <span>Жінка</span>
+                                            </label>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="btn__wrap">
+                                    <button class="btn btn-primary">Очистити</button>
+                                    <button class="btn btn-primary">Застосувати</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="catalog__wrap">
+
+                        <div class="product__item">
+                            <a href="product_card.html" class="product__image-wrap">
+                                <div class="product__image">
+                                    <img src="./assets/img/product-1.png" class="" alt="">
+                                </div>
+                            </a>
+                            <div class="product__content d-flex align-justify ">
+                                <a href="product_card.html" class="product__link">
+                                    <div class="product__title --relative">
+                                        CLOUD BLOUSE CLOUD BLOUSE CLOUD BLOUSE CLOUD BLOUSE
+                                    </div>
+                                </a>
+
+                                <div class="product__price text-center">
+                                    $350 SGD
+                                </div>
+                            </div>
+
+                            <a href="" class="btn btn-primary">ADD TO CART</a>
+                        </div>
+
+                        <div class="product__item">
+                            <div class="product__image-wrap">
+                                <div class="product__image">
+                                    <img src="./assets/img/product-2.png" class="" alt="">
+                                </div>
+                            </div>
+                            <div class="product__content d-flex align-justify ">
+                                <a href="" class="product__link">
+                                    <div class="product__title --relative">
+                                        CLOUD BLOUSE CLOUD BLOUSE CLOUD BLOUSE CLOUD BLOUSE
+                                    </div>
+                                </a>
+
+                                <div class="product__price text-center">
+                                    $350 SGD
+                                </div>
+                            </div>
+
+                            <a href="" class="btn btn-primary">ADD TO CART</a>
+                        </div>
+
+                        <div class="product__item">
+                            <div class="product__image-wrap">
+                                <div class="product__image">
+                                    <img src="./assets/img/product-3.png" class="" alt="">
+                                </div>
+                            </div>
+                            <div class="product__content d-flex align-justify ">
+                                <a href="" class="product__link">
+                                    <div class="product__title --relative">
+                                        CLOUD BLOUSE CLOUD BLOUSE CLOUD BLOUSE CLOUD BLOUSE
+                                    </div>
+                                </a>
+
+                                <div class="product__price text-center">
+                                    $350 SGD
+                                </div>
+                            </div>
+
+                            <a href="" class="btn btn-primary">ADD TO CART</a>
+                        </div>
+                        <div class="product__item">
+                            <div class="product__image-wrap">
+                                <div class="product__image">
+                                    <img src="./assets/img/product-4.png" class="" alt="">
+                                </div>
+                            </div>
+                            <div class="product__content d-flex align-justify ">
+                                <a href="" class="product__link">
+                                    <div class="product__title --relative">
+                                        CLOUD BLOUSE CLOUD BLOUSE CLOUD BLOUSE CLOUD BLOUSE
+                                    </div>
+                                </a>
+
+                                <div class="product__price text-center">
+                                    $350 SGD
+                                </div>
+                            </div>
+
+                            <a href="" class="btn btn-primary">ADD TO CART</a>
+                        </div>
+                        <div class="product__item">
+                            <div class="product__image-wrap">
+                                <div class="product__image">
+                                    <img src="./assets/img/product-5.png" class="" alt="">
+                                </div>
+                            </div>
+                            <div class="product__content d-flex align-justify ">
+                                <a href="" class="product__link">
+                                    <div class="product__title --relative">
+                                        CLOUD BLOUSE CLOUD BLOUSE CLOUD BLOUSE CLOUD BLOUSE
+                                    </div>
+                                </a>
+
+                                <div class="product__price text-center">
+                                    $350 SGD
+                                </div>
+                            </div>
+
+                            <a href="" class="btn btn-primary">ADD TO CART</a>
+                        </div>
+
+                        <div class="product__item">
+                            <div class="product__image-wrap">
+                                <div class="product__image">
+                                    <img src="./assets/img/product-6.png" class="" alt="">
+                                </div>
+                            </div>
+                            <div class="product__content d-flex align-justify ">
+                                <a href="" class="product__link">
+                                    <div class="product__title --relative">
+                                        CLOUD BLOUSE CLOUD BLOUSE CLOUD BLOUSE CLOUD BLOUSE
+                                    </div>
+                                </a>
+
+                                <div class="product__price text-center">
+                                    $350 SGD
+                                </div>
+                            </div>
+
+                            <a href="" class="btn btn-primary">ADD TO CART</a>
+                        </div>
+                        <div class="product__item">
+                            <div class="product__image-wrap">
+                                <div class="product__image">
+                                    <img src="./assets/img/product-1.png" class="" alt="">
+                                </div>
+                            </div>
+                            <div class="product__content d-flex align-justify ">
+                                <a href="" class="product__link">
+                                    <div class="product__title --relative">
+                                        CLOUD BLOUSE CLOUD BLOUSE CLOUD BLOUSE CLOUD BLOUSE
+                                    </div>
+                                </a>
+
+                                <div class="product__price text-center">
+                                    $350 SGD
+                                </div>
+                            </div>
+
+                            <a href="" class="btn btn-primary">ADD TO CART</a>
+                        </div>
+                        <div class="product__item">
+                            <div class="product__image-wrap">
+                                <div class="product__image">
+                                    <img src="./assets/img/product-1.png" class="" alt="">
+                                </div>
+                            </div>
+                            <div class="product__content d-flex align-justify ">
+                                <a href="" class="product__link">
+                                    <div class="product__title --relative">
+                                        CLOUD BLOUSE CLOUD BLOUSE CLOUD BLOUSE CLOUD BLOUSE
+                                    </div>
+                                </a>
+
+                                <div class="product__price text-center">
+                                    $350 SGD
+                                </div>
+                            </div>
+
+                            <a href="" class="btn btn-primary">ADD TO CART</a>
+                        </div>
+                        <div class="product__item">
+                            <div class="product__image-wrap">
+                                <div class="product__image">
+                                    <img src="./assets/img/product-1.png" class="" alt="">
+                                </div>
+                            </div>
+                            <div class="product__content d-flex align-justify ">
+                                <a href="" class="product__link">
+                                    <div class="product__title --relative">
+                                        CLOUD BLOUSE CLOUD BLOUSE CLOUD BLOUSE CLOUD BLOUSE
+                                    </div>
+                                </a>
+
+                                <div class="product__price text-center">
+                                    $350 SGD
+                                </div>
+                            </div>
+
+                            <a href="" class="btn btn-primary">ADD TO CART</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row align-right pagination text-center">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    пагінація
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <a href="" class="company-logo default-icon">
+                    <img src="assets/img/BC-logo.svg" alt="logo icon" class="company-logo__img">
+                </a>
+
+                <a href="mailto:info@bravocollection.com" class="company-email d-none d-md-block">info@bravocollection.com</a>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                <div class="footer-menu">
+
+                    <ul class="menu">
+                        <li class="menu-item">
+                            <a href="">Techniques</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href=""> Styles</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href=""> Folk Art</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="">Experiences</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="">Iconic Pieces</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href=""> Current Collection</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                <div class="footer-menu">
+
+                    <ul class="menu">
+                        <li class="menu-item">
+                            <a href="">Stores</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="">About Us</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="">Privacy Policy</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href=""> Terms and Conditions</a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="mailto:info@bravocollection.com" class="company-email d-block d-md-none">info@bravocollection.com</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="./assets/js/jquery-3.6.1.min.js"></script>
+<script src="assets/js/swiper-bundle.min.js"></script>
+<script src="assets/js/modernizr.custom.js"></script>
+<script src="src/scripts/js_app.js"></script>
+
+
+<script>
+    $(document).on('click', '.btn-filter', function () {
+        $('.filter__wrap ').toggleClass('open');
+    });
+
+
+    $('#ajax-filter-section').on('click', '.filter__title', function () {
+        $(this).closest('.filter__section').not('.filter-section-disabled').toggleClass('active');
+        $(this).closest('.filter__section').not('.filter-section-disabled').find('.filter__content').slideToggle();
+    });
+</script>
+</body>
+</html>
+
+
+
+
