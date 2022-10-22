@@ -1,0 +1,171 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+
+.news {
+  &__item {
+
+  }
+
+  &__img {
+    margin-bottom: 21px;
+    @media (max-width: $breakpoint-lg) {
+      margin-bottom: 17px;
+    }
+  }
+
+  &__heading {
+    font-weight: 400;
+    @include fontSize(16, 18);
+    line-height: 170%;
+    text-align: center;
+    letter-spacing: -1px;
+
+    color: #000000;
+    margin-bottom: 13px;
+  }
+
+  &__desc {
+    margin-bottom: 7px;
+    color: #333333;
+  }
+
+  &__btn {
+    color: #333333;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 170%;
+    @include transition(.4);
+
+    & i {
+      font-size: 10px;
+      @include transition(.4);
+    }
+
+    &:hover {
+      color: $accentColor;
+
+      & i {
+        margin-left: 5px;
+      }
+    }
+  }
+}
+
+.s-blog {
+  padding: 55px 0 65px 0;
+
+  & .column {
+    margin-bottom: 43px;
+  }
+
+  & .section {
+    &-heading {
+      margin-bottom: 43px;
+    }
+
+    &-vector {
+      object-fit: contain;
+      object-position: center;
+      position: absolute;
+
+      @media (max-width: 1600px) {
+        display: none;
+      }
+
+      &:nth-child(1) {
+        width: 39px;
+        height: 39px;
+
+        top: 20%;
+        left: -113px;
+
+      }
+
+      &:nth-child(2) {
+        top: 10px;
+        right: -113px;
+      }
+
+      &:nth-child(3) {
+        right: 0;
+        bottom: 10px;
+      }
+
+      &__wrap {
+
+      }
+    }
+  }
+
+  & .btn-primary {
+    max-width: min-content;
+  }
+}
+
+.s-article {
+  padding: 40px 0 64px 0;
+
+  & .section {
+    &-heading {
+      margin-bottom: 25px;
+    }
+
+    &-vector {
+      object-fit: contain;
+      object-position: center;
+      position: absolute;
+
+      @media (max-width: 1600px) {
+        display: none;
+      }
+
+      &:nth-child(1) {
+        width: 39px;
+        height: 39px;
+
+        top: 40%;
+        left: -113px;
+
+      }
+
+      &:nth-child(2) {
+        top: 60px;
+        right: -130px;
+      }
+
+      &:nth-child(3) {
+        right: -86px;
+        bottom: 20%;
+      }
+
+      &__wrap {
+
+      }
+    }
+  }
+
+  & .nav-links {
+    margin-top: 50px;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  & .btn-primary {
+    padding: 5px 12px 6px 12px;
+    min-width: auto;
+
+    & i {
+      &.icon-arrow-left {
+        margin-right: 5px;
+      }
+
+      @media (max-width: $breakpoint-sm) {
+        display: none;
+      }
+    }
+  }
+}

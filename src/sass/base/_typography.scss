@@ -1,0 +1,51 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.text {
+  &-right {
+    text-align: right;
+  }
+
+  &-center {
+    text-align: center;
+  }
+
+  &-left {
+    text-align: left;
+  }
+  &-uppercase {
+    text-transform: uppercase;
+  }
+  &-m {
+    font-weight: 400;
+    @include fontSize(12,14);
+    line-height: 170%;
+    color: $primaryColor;
+  }
+  &-l{
+    font-weight: 400;
+    @include fontSize(32,40);
+    line-height: 1.25;
+    color: $primaryColor;;
+  }
+  &-xl{
+    font-weight: 400;
+    @include fontSize(32,64);
+    line-height: 1.25;
+    color: $primaryColor;;
+  }
+}
+
+
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Katana', monospace;
+}
+
+.icon-arrow-left:before {
+  content: "\e901";
+}
+.icon-arrow-right:before {
+  content: "\e900";
+}
+

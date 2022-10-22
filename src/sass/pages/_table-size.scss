@@ -1,0 +1,245 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+
+.s-table-size {
+  padding-top: 40px;
+  overflow: hidden;
+  &__wrap {
+    margin-bottom: 70px;
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 60px;
+      width: max-content;
+    }
+  }
+  & .section {
+    &-heading {
+      margin-bottom: 45px;
+    }
+  }
+}
+
+.toggleContainer {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: fit-content;
+  border: 1px solid #000;
+  border-radius: 20px;
+  background: #343434;
+  font-weight: bold;
+  color: #000;
+  cursor: pointer;
+  margin: 0 auto 70px auto;
+}
+
+.toggleContainer::before {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  left: 0%;
+  border-radius: 20px;
+  background: white;
+  transition: all 0.3s;
+}
+
+.toggleCheckbox:checked + .toggleContainer::before {
+  left: 50%;
+}
+
+.toggleContainer div {
+  padding: 6px 12px;
+  text-align: center;
+  z-index: 1;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.toggleCheckbox {
+  display: none;
+}
+
+.toggleCheckbox:checked + .toggleContainer div:first-child {
+
+  color: $whiteColor;
+  transition: color 0.3s;
+}
+
+.toggleCheckbox:checked + .toggleContainer div:last-child {
+  color: #000;
+  transition: color 0.3s;
+}
+
+.toggleCheckbox + .toggleContainer div:first-child {
+  color: #000000;
+  transition: color 0.3s;
+}
+
+.toggleCheckbox + .toggleContainer div:last-child {
+  color: white;
+  transition: color 0.3s;
+}
+
+.switch-button {
+  width: 400px;
+  height: 40px;
+  text-align: center;
+
+  left: 50%;
+  top: 50%;
+  transform: translate3D(-50%, -50%, 0);
+  will-change: transform;
+  z-index: 197 !important;
+  cursor: pointer;
+  transition: .3s ease all;
+  border: 1px solid $primaryColor;
+  background: $primaryColor;
+
+  &-case {
+    display: inline-block;
+    background: none;
+    width: 49%;
+    height: 100%;
+    color: white;
+    position: relative;
+    border: none;
+    transition: .3s ease all;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    padding-bottom: 1px;
+
+    &:hover {
+      color: grey;
+      cursor: pointer;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .active {
+    color: #151515;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    z-index: -1;
+    transition: .3s ease-out all;
+
+    &-case {
+      color: #151515;
+    }
+  }
+}
+
+
+.table-size {
+  margin: 0 auto;
+
+  &__wrap {
+    display: inline-block;
+    overflow-x: auto;
+    vertical-align: top;
+    width: 100%;
+  }
+
+  &__btn {
+    background-color: transparent;
+    border: none;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: $accentColor;
+
+    &-wrap {
+      @media (min-width: $breakpoint-md) {
+        display: none;
+      }
+      margin-top: 30px;
+    }
+  }
+
+  &__text {
+    text-align: center;
+    font-weight: 500;
+    @include fontSize(12, 16);
+    line-height: 1.25;
+    color: $primaryColor;
+  }
+
+  .inch, .cm {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .inch {
+    color: red;
+
+    &.hide {
+      display: none;
+    }
+
+    &.show {
+      display: block;
+    }
+  }
+
+  .cm {
+    display: none;
+
+    &.show {
+      display: block;
+    }
+  }
+
+  td, th {
+    width: 110px;
+
+    @media (min-width: 900px) {
+      min-width: 100px;
+      max-width: calc(96vw / 8);
+    }
+
+    @media (max-width: 1023px) {
+      min-width: calc((100vw - 55px) / 4);
+      max-width: calc((100vw - 55px) / 4);
+    }
+
+    &:not(:last-child) {
+      border-right: 0.5px solid #000000;;
+    }
+
+    &:nth-child(1), &:nth-child(2) {
+      border-right: none;
+    }
+  }
+
+  thead tr,
+  tbody tr:not(:last-child) {
+    border-bottom: 0.5px solid #000;
+  }
+
+  thead {
+    & th {
+      padding-bottom: 15px;
+      padding-top: 15px;
+    }
+  }
+
+  tbody {
+    & td {
+      height: 50px;
+      padding: 14px;
+      position: relative;
+    }
+  }
+}

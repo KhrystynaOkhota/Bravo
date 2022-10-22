@@ -1,0 +1,37 @@
+@import "base/_reset";
+@import "base/_fonts";
+@import "base/_typography";
+@import "abstracts/_variables";
+@import "abstracts/_mixins";
+@import "vendor/_slick";
+@import "base/_base";
+@import "base/_animations";
+@import "layout/_header";
+@import "layout/_footer";
+@import "layout/_grid";
+@import "components/_buttons";
+@import "components/_forms";
+@import "components/_editor-style";
+@import "components/_contact-phone";
+@import "components/_breadcrumb";
+@import "components/_accordion";
+@import "components/_selectric";
+@import "components/_modals";
+//@import "components/_same-sections";
+
+@import "pages/_catalog";
+@import "pages/_product-card";
+@import "pages/_wedding";
+@import "pages/_about";
+@import "pages/_home";
+@import "pages/_blog";
+@import "pages/_other";
+
+@import "pages/_contacts";
+@import "pages/_table-size";
+@import "pages/_order";
+
+
+
+
+

@@ -1,0 +1,86 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.footer {
+  background-color: $primaryColor;
+  padding: 26px 0 96px 0;
+  @media (max-width: $breakpoint-md) {
+    padding: 35px 0 26px 0;
+  }
+
+  &-menu {
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 45px;
+    }
+  }
+
+  & .company {
+    &-email {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      color: $whiteColor;
+      @media (max-width: $breakpoint-md) {
+        padding-top: 29px;
+        text-align: center;
+      }
+    }
+
+    &-logo {
+      width: 100%;
+      max-width: 200px;
+      display: block;
+      margin-bottom: 90px;
+      @media (max-width: $breakpoint-md) {
+        margin: 0 auto 38px auto;
+      }
+
+      &__img {
+        object-fit: fill;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  &-item {
+    padding: 0 2em;
+    @media (max-width: $breakpoint-xl) {
+      margin-bottom: 30px;
+    }
+
+    &__title {
+      font-weight: 500;
+      @include fontSize(14, 16);
+      line-height: 1.25;
+      text-transform: uppercase;
+      color: $accentColor;
+      margin-bottom: 20px;
+      min-height: 40px;
+      @media (max-width: $breakpoint-xl) {
+        min-height: auto;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  & .menu {
+    &-item {
+      &:not(&:last-child) {
+        margin-bottom: 10px;
+      }
+
+      & a {
+        font-weight: 700;
+       font-size: 14px;
+        line-height: 1.25;
+        color: $whiteColor;
+        @include transition(.3);
+
+        &:hover {
+          color: $accentColor;
+        }
+      }
+    }
+  }
+}

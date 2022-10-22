@@ -1,0 +1,140 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.btn {
+  position: relative;
+  box-shadow: none;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  text-decoration: none;
+  font-family: 'LetterGothicStd', monospace;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+
+  color: $primaryColor;
+
+  padding: 14px 20px 13px 20px;
+  min-width: 165px;
+  @include transition(.4);
+
+  &:focus {
+    outline: none;
+  }
+
+  &-primary {
+
+    color: $primaryColor;
+    border: 1px solid #000000;
+    transition: all 0.4s ease;
+    overflow: hidden;
+
+
+    &:before {
+      background: $primaryColor;
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0%;
+      height: 100%;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+      transition: all 0.6s ease;
+    }
+
+    @media (max-width: $breakpoint-lg) {
+
+    }
+
+    & i {
+      font-size: 12px;
+      margin-left: 5px;
+    }
+
+    &:hover {
+      color: $whiteColor;
+
+      &::before {
+        width: 110%;
+      }
+    }
+  }
+
+  &-light {
+    background-color: $whiteColor;
+  }
+
+  &-filter {
+    border: 1px solid #000000;
+    background-color: transparent;
+    cursor: pointer;
+    font-family: 'LetterGothicStd', sans-serif;
+
+    padding: 8px;
+    display: grid;
+    grid-template-columns: 18px 1fr;
+    grid-gap: 7px;
+    align-items: center;
+
+    & span {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 17px;
+      color: $primaryColor;
+    }
+
+    margin-right: 18px;
+
+    & img {
+      width: 18px;
+      height: 18px;
+      object-fit: contain;
+    }
+  }
+}
+
+
+.btn-close {
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  right: 14px;
+
+
+  z-index: 10;
+  transform: rotate(-45deg);
+  transition: all .5s cubic-bezier(.25, .46, .45, .94);
+
+  & svg {
+    fill: $primaryColor;
+  }
+
+  &:hover {
+    transform: scale(1.4) rotate(-90deg);
+    transition: all .5s cubic-bezier(.25, .46, .45, .94);
+  }
+}
+
+.active {
+  & .btn-close {
+    transform: scale(1.4) rotate(-90deg);
+    transition: all .5s cubic-bezier(.25, .46, .45, .94);
+  }
+}
